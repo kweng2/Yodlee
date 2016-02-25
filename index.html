@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Template</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body ng-app="Yodlee" ng-controller="yController" >
+
+    <div class="firstPanel">
+      <h1>First Panel</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor molestie arcu, sit amet dictum est dignissim vitae. Nullam tristique tristique sem, sollicitudin facilisis nibh cursus eget. Proin dignissim libero nec ligula bibendum tincidunt.</p>
+      <div class="elements" ng-repeat="element1 in firstList" ng-click="firstPanelClick(element1)">
+        {{element1}}
+      </div>
+    </div>
+    <div class="secondPanel" ng-show="showSecondPanel">
+      <h1>Second Panel</h1>
+      <p>Ut vel porttitor justo, a sagittis felis. Nulla facilisi. Aenean blandit, dui sit amet blandit iaculis, ante massa dictum neque, quis luctus sapien purus a ligula. Donec elementum bibendum lacus a tempus. Morbi aliquet purus ut massa ornare condimentum. Morbi orci urna, vulputate et libero eget, faucibus dapibus metus.</p>
+      <button ng-click="hideSecondPanel()">X</button>
+      <div class="elements" ng-repeat="element2 in secondList" ng-click="secondPanelClick(element)">
+        {{element2}}
+      </div>
+    </div>
+
+    <div class="thirdPanel" ng-show="showThirdPanel">
+      <h1>Third Panel</h1>
+      <p>In ex dui, efficitur vitae tellus ac, eleifend varius lectus. Suspendisse vel mauris at orci maximus vestibulum a vel odio. Nulla quis luctus orci. Mauris pulvinar turpis ac ligula vulputate, at fermentum est egestas. Donec ultrices fringilla imperdiet. Pellentesque id tellus feugiat leo facilisis placerat eu sit amet nunc. Maecenas hendrerit laoreet ultrices. Praesent vulputate mauris sapien, eu egestas massa sagittis eu. Ut quis tellus sodales, pulvinar enim ut, gravida quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+      <button ng-click="hideThirdPanel()">X</button>
+      <div class="elements" ng-repeat="element3 in thirdList">
+        {{element3}}
+      </div>
+    </div>
+
+
+  </body>
+</html>
